@@ -39,11 +39,6 @@ namespace Image_processing
             pictureBox2.Image = processed;
         }
 
-        private void monoVerticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dIPToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
@@ -66,7 +61,7 @@ namespace Image_processing
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            processed.Save(saveFileDialog1.FileName);
         }
 
         private void greyscalingToolStripMenuItem_Click(object sender, EventArgs e)
@@ -240,6 +235,16 @@ namespace Image_processing
                     b.SetPixel(x, (b.Height - 1) - y, Color.Black);
                 }
             }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
